@@ -25,7 +25,8 @@ router.get("/", function(req, res){
               campgrounds: allCampgrounds,
               current: pageNumber,
               pages: Math.ceil(count / perPage),
-              search: req.query.search
+              search: req.query.search,
+              page: "campgrounds"
             });
           }
         });
@@ -47,7 +48,8 @@ router.get("/", function(req, res){
                 campgrounds: allCampgrounds,
                 current: pageNumber,
                 pages: Math.ceil(count / perPage),
-                search: false
+                search: false,
+                page: "campgrounds"
               });
             }
         }); 
